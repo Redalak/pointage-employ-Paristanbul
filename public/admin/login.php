@@ -4,8 +4,8 @@ require_once __DIR__ . '/../../includes/auth.php';
 $error = handle_admin_login();
 $page_title = 'Admin - Connexion';
 $assets_prefix = '../';
-require_once __DIR__ . '/../../src/vue/partials/header.php';
-require_once __DIR__ . '/../../src/vue/partials/navbar_admin.php';
+require_once __DIR__ . '/../../vue/partials/header.php';
+require_once __DIR__ . '/../../vue/partials/navbar_admin.php';
 ?>
   <div class="container py-5">
     <div class="row justify-content-center">

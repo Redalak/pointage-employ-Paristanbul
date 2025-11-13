@@ -1,9 +1,10 @@
 <?php
+/*
 require_once __DIR__ . '/../includes/config.php';
 require_once __DIR__ . '/../includes/attendance.php';
 $page_title = 'Pointage QR';
-require_once __DIR__ . '/../src/vue/partials/header.php';
-require_once __DIR__ . '/../src/vue/partials/navbar_kiosk.php';
+require_once __DIR__ . '/../vue/partials/header.php';
+require_once __DIR__ . '/../vue/partials/navbar_kiosk.php';
 
 $flash = null;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -19,11 +20,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $flash = 'Action invalide';
     }
 }
+*/
 ?>
+<!--
 <div class="container py-4">
-  <?php if ($flash): ?>
+  <?php /* if ($flash): ?>
     <div class="alert alert-info auto-dismiss"><?= htmlspecialchars($flash) ?></div>
-  <?php endif; ?>
+  <?php endif; */?>
+  -->
 
   <div class="row g-4">
     <div class="col-md-7">
@@ -49,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </div>
 </div>
 <script src="https://unpkg.com/html5-qrcode" defer></script>
-<?php require_once __DIR__ . '/../src/vue/partials/footer.php'; ?>
+<?php require_once __DIR__ . '/../vue/partials/footer.php'; ?>
 <script>
 window.addEventListener('load', () => {
   const qrField = document.getElementById('qrField');
