@@ -24,31 +24,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pointage QR</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/styles.css">
   <script src="https://unpkg.com/html5-qrcode" defer></script>
-  <style>body{padding:20px}</style>
+  <script src="assets/app.js" defer></script>
 </head>
 <body>
-<div class="container">
-  <h1 class="mb-3">Pointage employés</h1>
+<nav class="navbar navbar-dark">
+  <div class="container d-flex align-items-center py-2">
+    <span class="brand">Pointage employés</span>
+    <a class="btn btn-outline-light btn-sm" href="admin/login.php">Admin</a>
+  </div>
+</nav>
+
+<div class="container py-4">
   <?php if ($flash): ?>
-    <div class="alert alert-info"><?= htmlspecialchars($flash) ?></div>
+    <div class="alert alert-info auto-dismiss"><?= htmlspecialchars($flash) ?></div>
   <?php endif; ?>
 
   <div class="row g-4">
-    <div class="col-md-6">
-      <h4>Scanner QR</h4>
-      <div id="reader" style="width:100%"></div>
-      <form id="qrForm" method="post" class="mt-3">
-        <input type="hidden" name="qr" id="qrField">
-        <div class="btn-group">
+    <div class="col-md-7">
+      <div class="card">
+        <h4 class="mb-3">Scanner QR</h4>
+        <div id="reader" style="width:100%"></div>
+        <form id="qrForm" method="post" class="mt-3 d-flex gap-2">
+          <input type="hidden" name="qr" id="qrField">
           <button class="btn btn-success" name="action" value="in" type="submit">Arriver</button>
           <button class="btn btn-danger" name="action" value="out" type="submit">Partir</button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
-    <div class="col-md-6">
-      <h4>Accès admin</h4>
-      <a class="btn btn-secondary" href="admin/login.php">Espace admin</a>
+    <div class="col-md-5">
+      <div class="card">
+        <h4 class="mb-2">Instructions</h4>
+        <ul class="small-muted mb-0">
+          <li>Présentez votre QR au lecteur.</li>
+          <li>Arriver ouvre une session, Partir la clôture.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

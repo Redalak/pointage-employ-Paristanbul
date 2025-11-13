@@ -83,3 +83,15 @@ function daily_totals($date) {
     $stmt->execute([$date]);
     return $stmt->fetchAll();
 }
+
+function weekly_totals($from, $to) {
+    global $pdo;
+    $stmt = $pdo->prepare('SELECT e.full_name, SUM(IFNULL(minutes_worked,0)) as minutes
+        FROM clock_sessions cs
+        JOIN employees e ON e.id = cs.employee_id
+        WHERE cs.started_at BETWEEN ? AND ?
+        GROUP BY cs.employee_id
+        ORDER BY e.full_name');
+    $stmt->execute([$from, $to]);
+    return $stmt->fetchAll();
+}
