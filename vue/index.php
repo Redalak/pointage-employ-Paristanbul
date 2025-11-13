@@ -1,5 +1,5 @@
 <?php
-/*
+
 require_once __DIR__ . '/../includes/config.php';
 require_once __DIR__ . '/../includes/attendance.php';
 $page_title = 'Pointage QR';
@@ -20,13 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $flash = 'Action invalide';
     }
 }
-*/
+
 ?>
 <!--
 <div class="container py-4">
-  <?php /* if ($flash): ?>
+  <?php  if ($flash): ?>
     <div class="alert alert-info auto-dismiss"><?= htmlspecialchars($flash) ?></div>
-  <?php endif; */?>
+  <?php endif; ?>
   -->
 
   <div class="row g-4">

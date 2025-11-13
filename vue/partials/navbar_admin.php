@@ -3,11 +3,11 @@
   <div class="container d-flex align-items-center py-2">
     <span class="brand">Admin</span>
     <div class="d-flex gap-2">
-      <a class="btn btn-outline-light btn-sm" href="dashboard.php">Tableau</a>
-      <a class="btn btn-outline-light btn-sm" href="employees.php">Employés</a>
-      <a class="btn btn-outline-light btn-sm" href="attendances.php">Journal</a>
-      <a class="btn btn-outline-light btn-sm" href="totals.php">Totaux</a>
-      <a class="btn btn-outline-danger btn-sm" href="logout.php">Quitter</a>
+      <a class="btn btn-outline-light btn-sm" href="../../public/admin/dashboard.php">Tableau</a>
+      <a class="btn btn-outline-light btn-sm" href="../../public/admin/employees.php">Employés</a>
+      <a class="btn btn-outline-light btn-sm" href="../../public/admin/attendances.php">Journal</a>
+      <a class="btn btn-outline-light btn-sm" href="../../public/admin/totals.php">Totaux</a>
+      <a class="btn btn-outline-danger btn-sm" href="../../public/admin/logout.php">Quitter</a>
     </div>
   </div>
 </nav>

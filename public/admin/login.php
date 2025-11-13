@@ -24,4 +24,4 @@ require_once __DIR__ . '/../../vue/partials/navbar_admin.php';
       </div>
     </div>
   </div>
-<?php require_once __DIR__ . '/../../src/vue/partials/footer.php'; ?>
+<?php require_once __DIR__ . '/../../vue/partials/footer.php'; ?>
