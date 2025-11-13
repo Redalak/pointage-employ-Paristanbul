@@ -9,7 +9,7 @@ use PDOException;
 class Bdd {
     /** @var PDO|null */
     private $pdo = null;
-    const DB_NAME = 'pointeur_employee';
+    const DB_NAME = 'logistique_agenda';
 
     public function getBdd(): PDO {
         if ($this->pdo instanceof PDO) {
